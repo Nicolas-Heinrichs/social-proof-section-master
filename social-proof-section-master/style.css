@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+:root {
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Spartan", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background: right 0% / 70% 100% no-repeat
+    url(./images/bg-pattern-bottom-desktop.svg);
+}
+/************************************************* Top ******************************************/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 80%;
+  max-height: 100vh;
+  height: 100vh;
+  background: left -20% / 50% 60% no-repeat url(./images/bg-pattern-top-desktop.svg);
+}
+.top {
+  position: relative;
+  top: 12%;
+  left: 15%;
+  display: flex;
+  flex-direction: row;
+}
+.text {
+  width: 30%;
+}
+.rating {
+  position: relative;
+  left: 18%;
+  width: 40%;
+}
+.r1,
+.r2,
+.r3 {
+  background-color: var(--Light-Grayish-Magenta);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 2%;
+  min-width: 50%;
+}
+.r1 {
+  margin: 2% 5% 2% -5%;
+}
+.r2 {
+  margin: 2% 0 2% 0;
+}
+.r3 {
+  margin: 2% -5% 2% 5%;
+}
+.stars {
+  margin: 1% 0 1% 0;
+  min-width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.stars img {
+  margin: 0 1px 0 1px;
+  height: 12px;
+}
+h1 {
+  color: var(--Very-Dark-Magenta);
+  font-size: 1.7rem;
+}
+.rate {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+h4 {
+  color: var(--Very-Dark-Magenta);
+  margin: 0 5% 0 10%;
+  font-size: 0.6rem;
+}
+h5 {
+  margin-top: 2%;
+  color: var(--Dark-Grayish-Magenta);
+  font-size: 0.6rem;
+  font-weight: 400;
+  width: 125%;
+}
+/*************************************************** Bottom **************************************/
+.bottom {
+  position: relative;
+  width: 100%;
+  margin: 5%;
+  left: 10%;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.c1,
+.c2,
+.c3 {
+  width: 28%;
+  height: 32vh;
+  background-color: var(--Very-Dark-Magenta);
+  border-radius: 5px;
+}
+.c1 {
+  margin-top: 2%;
+  margin-right: 3%;
+}
+.c2 {
+  margin-top: 4%;
+  margin-right: 3%;
+}
+
+.c3 {
+  margin-top: 6%;
+}
+.top-card {
+  display: flex;
+  flex-direction: row;
+  margin: 8% 0 2% 6%;
+  align-items: center;
+}
+.profil-picture img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.profil-picture {
+  margin-right: 5%;
+}
+.name {
+  color: white;
+  font-size: 0.5rem;
+  font-weight: 500;
+  margin-bottom: 2%;
+}
+.buyer {
+  color: var(--Soft-Pink);
+  font-size: 0.5rem;
+  font-weight: 500;
+}
+.quote {
+  color: white;
+  font-size: 0.5rem;
+  font-weight: 400;
+  margin: 5% 4% 5% 6%;
+  width: 82%;
+}
+
+/*************************************** RESPONSIVE ********************************/
+@media screen and (max-width: 850px) {
+  .top {
+    margin-bottom: 10%;
+  }
+}
+@media screen and (max-width: 375px) {
+  body {
+    background-image: url(./images/bg-pattern-bottom-mobile.svg) !important;
+  }
+  .container {
+    background-image: url(./images/bg-pattern-top-mobile.svg) !important;
+    display: flex;
+    flex-direction: column !important;
+  }
+  .top {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .bottom {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .card {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column !important;
+  }
+  .text {
+    width: 80%;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  .rating {
+    width: 80%;
+    left: 0% !important;
+  }
+
+  .r1,
+  .r2,
+  .r3 {
+    margin: 3%;
+    width: 100%;
+    flex-direction: column;
+  }
+  .rate {
+    margin: 1%;
+    width: 110%;
+  }
+
+  .c1,
+  .c2,
+  .c3 {
+    margin: 4%;
+    width: 80%;
+    height: 25vh;
+  }
+}
